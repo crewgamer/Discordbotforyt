@@ -14,9 +14,9 @@ client.on("message", function(msg) {
     }
     msg.channel.send("Your Message was set :white_check_mark: " + msg.author )
 let ARGUMENTS = msg.content.split(` `).slice(1);
-let GAMEARGS = args.join(` `)
+let GAMEARGS = ARGUMENTS.join(` `)
 console.log(game)
-client.user.setGame(game)
+client.user.setGame(GANEARGUMENTS)
 }
 })
 
@@ -27,9 +27,8 @@ client.on("message", function(msg) {
       return;
     }
 let ARGUMENTS = msg.content.split(` `).slice(1);
-let WORDSTOECHO = args.join(` `)
-console.log(`${msg.author.tag} made the bot say ` + wordstoecho)
-msg.channel.send(wordstoecho)
+let WORDSTOECHO = ARGUMENTS.join(` `)
+msg.channel.send(WORDSTOECHO)
 }
 })
 
@@ -39,9 +38,8 @@ if(msg.content.startsWith (prefix + "sendto")) {
 //msg.guild.member(msg.mentions.members.first()).removeRole('371698466436677642').catch(error => console.log(error));
 msg.channel.send("Dmed " + msg.mentions.members.first() +  " :white_check_mark:  "  + msg.author)
 let ARGUMENTS = msg.content.split(` `).slice(1);
-let MESSAGEINNERS = args.join(` `)
-msg.mentions.members.first().sendMessage(Messageinners)
-console.log(`${msg.author.tag} sent a message to ` + msg.mentions.members.first()  + " saying   " + Messageinners)
+let MESSAGEINNERS = ARGUMENTS.join(` `)
+msg.mentions.members.first().sendMessage(MESSAGEINNERS)
 //client.channels.get('371699391431704587').sendMessage('User Unwhitelisted by ' + msg.author)
 }
 })
