@@ -8,7 +8,7 @@ client.on("ready", function() {
 
 client.on("message", function(msg) {
   if(msg.content.startsWith  (prefix + "setgame")) {
-    if(msg.author.id !==  "370703952490135552") {
+    if(msg.author.id !==  "267668745193783296") {
       msg.channel.send(":x: Bot Owner Only Sorry Bot owners only " +  msg.author)
       return;
     }
@@ -22,7 +22,7 @@ client.user.setGame(game)
 
 client.on("message", function(msg) {
   if(msg.content.startsWith  (prefix + "echo")) {
-    if(msg.author.id !==  "370703952490135552") {
+    if(msg.author.id !==  "267668745193783296") {
       msg.channel.send(":x: Bot Owner Only Sorry Bot owners only " +  msg.author)
       return;
     }
